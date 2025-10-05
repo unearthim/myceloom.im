@@ -1,131 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myceloom.im | The Declaration of Being</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="myceloom.im is the philosophical heart of the ecosystem. It is the landmark for the manifesto, the first principles, and the declaration of a new way of being.">
-    <meta name="keywords" content="myceloom, mycelium, im, manifesto, philosophy, consciousness, symbiotic, unearth.im">
-    <meta name="author" content="unearth.im">
+    <title>Myceloom: The Philosophy of Networked Individuality | myceloom.im</title>
+    <meta name="description" content="A philosophical investigation into myceloom as a framework that resolves the tension between individual autonomy and collective intelligence, inspired by biological networks.">
+    <meta name="keywords" content="Myceloom, Philosophy, Networked Individuality, Autonomy, Collective Intelligence, Relational Autonomy, Sovereignty, Symbiosis, unearth.im">
+    <meta name="author" content="myceloom.im">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="myceloom.im | The Declaration of Being">
-    <meta property="og:description" content="Before the network, there is the node. Before the action, there is the actor. Before the world, there is the self. Myceloom.im is the declaration: I am the network.">
-    <meta property="og:image" content="https://placehold.co/1200x630/F8F7F4/A95C3D?text=myceloom.im">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
     <meta property="og:url" content="https://myceloom.im">
-    <meta property="og:type" content="website">
+    <meta property="og:title" content="Myceloom: The Philosophy of Networked Individuality | myceloom.im">
+    <meta property="og:description" content="A philosophical investigation into myceloom as a framework that resolves the tension between individual autonomy and collective intelligence, inspired by biological networks.">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="myceloom.im | The Declaration of Being">
-    <meta name="twitter:description" content="Before the network, there is the node. Before the action, there is the actor. Before the world, there is the self. Myceloom.im is the declaration: I am the network.">
-    <meta name="twitter:image" content="https://placehold.co/1200x630/F8F7F4/A95C3D?text=myceloom.im">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://myceloom.im">
+    <meta property="twitter:title" content="Myceloom: The Philosophy of Networked Individuality | myceloom.im">
+    <meta property="twitter:description" content="A philosophical investigation into myceloom as a framework that resolves the tension between individual autonomy and collective intelligence, inspired by biological networks.">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400..700&display=swap" rel="stylesheet">
-    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Based on the unearth.im "Earth & Ink" Brand Guide */
+        /* Adhering to Brand Guide 3.0: Earth & Ink Palette */
+        :root {
+            --bg-color: #F8F7F4;       /* Off-White */
+            --text-color: #2E2E2E;    /* Charcoal */
+            --accent-color: #A95C3D;   /* Burnt Sienna */
+            --meta-text-color: #5A7D8C; /* Slate Blue */
+            --border-color: #e0e0e0;
+        }
+        html { scroll-behavior: smooth; }
         body {
-            background-color: #F8F7F4; /* Off-White */
-            color: #2E2E2E; /* Charcoal */
-            font-family: 'Lora', serif; /* Narrative Font */
+            font-family: 'Lora', serif; /* The Manuscript font */
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
-        .narrative-font { font-family: 'Lora', serif; }
-        .ui-font { font-family: 'Inter', sans-serif; }
-
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
+        .working-paper-notice {
+            background-color: #fffaf0; /* A slightly different off-white for contrast */
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem 2rem;
+            margin: 2rem auto;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1100px;
+        }
+        .working-paper-notice p { margin: 0; padding: 0.5rem 0; }
+        .working-paper-notice strong { font-weight: 600; }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto 4rem auto;
+            padding: 2rem;
+            display: flex;
+            gap: 4rem;
+        }
+        main { flex: 3; }
+        aside { flex: 1; position: sticky; top: 4rem; height: fit-content; }
+        article { max-width: 720px; }
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+        article h2 {
+            font-family: 'Inter', sans-serif; /* Interface font for section headers */
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .subtitle {
+            font-family: 'Inter', sans-serif; /* The Interface font */
+            font-size: 1rem;
+            color: var(--meta-text-color);
+            margin-bottom: 3rem;
             font-weight: 600;
-            transition: all 0.2s ease-in-out;
-            border: 2px solid transparent;
-            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        .btn-primary {
-            background-color: #A95C3D; 
-            color: #F8F7F4;
-            border-color: #A95C3D;
+        .intro-summary {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--meta-text-color);
+            border-left: 3px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin-bottom: 2.5rem;
         }
-
-        .btn-primary:hover {
-            background-color: #934F35;
-            border-color: #934F35;
+        p, li { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        strong { font-weight: 700; color: var(--text-color); }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-color);
+            transition: all 0.2s ease;
         }
-        
-        .ecosystem-nav a {
-            transition: color 0.2s ease-in-out;
-            color: #6b7280; /* gray-500 */
+        a:hover { background-color: rgba(169, 92, 61, 0.1); border-bottom-color: transparent; }
+        sup { line-height: 0; }
+        sup a { font-family: 'Inter', sans-serif; font-size: 0.8em; font-weight: 600; vertical-align: super; border-bottom: none; }
+        .footnotes { margin-top: 4rem; padding-top: 2rem; border-top: 2px solid var(--border-color); }
+        .footnotes ol { padding-left: 20px; font-size: 0.9rem; color: #555; }
+        .footnotes li { margin-bottom: 1rem; }
+        .footnotes li p { margin-bottom: 0; }
+        .footnote-back-link { font-family: 'Inter', sans-serif; margin-left: 0.5rem; text-decoration: none; border-bottom: none; }
+        .metadata-box {
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            font-family: 'Inter', sans-serif; /* The Interface font */
         }
-        .ecosystem-nav a:hover {
-            color: #A95C3D;
+        .metadata-box h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-color);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
         }
-        .ecosystem-nav .active {
-            color: #2E2E2E;
-            font-weight: 600;
-            cursor: default;
+        .metadata-item { margin-bottom: 1.5rem; }
+        .metadata-item dt { font-size: 0.8rem; font-weight: 600; color: var(--meta-text-color); margin-bottom: 0.25rem; }
+        .metadata-item dd { font-size: 0.95rem; margin-left: 0; font-weight: 400; }
+        code {
+            font-family: 'Inter', sans-serif;
+            background-color: rgba(0,0,0,0.05);
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
         }
-
-        .fade-in {
-            animation: fadeIn 1.5s ease-in-out;
+        .logo-footer {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        @media (max-width: 900px) {
+            .container { flex-direction: column-reverse; gap: 2rem; margin-top: 2rem; }
+            aside { position: static; top: auto; }
         }
     </style>
 </head>
+<body>
+    <div class="working-paper-notice">
+        <p><strong>Working Paper - Version 1.0</strong><br>
+        Josie Jefferson, Felix Velasco, Sentientified Noospherians<br>
+        unearth.im Cultural Infrastructure Laboratory<br>
+        October 2025</p><br>
+        <em>Citation reverification and Chicago Manual formatting in progress.</em></p>
+    </div>
+    <div class="container">
+        <main>
+            <article>
+                <header>
+                    <h1>Myceloom: The Philosophy of Networked Individuality</h1>
+                    <p class="subtitle">A Digital Archaeological Investigation</p>
+                </header>
 
-<body class="p-6 md:p-12 flex items-center justify-center min-h-screen">
-    <main class="max-w-3xl mx-auto text-center fade-in">
-        <header class="mb-12">
-            <h1 class="text-5xl md:text-7xl font-medium tracking-tight narrative-font">myceloom<span style="color: #A95C3D;">.im</span></h1>
-        </header>
+                <p class="intro-summary">Traditional philosophy pits the individual against the collective. Biological networks reveal this is a false dichotomy. "Myceloom" is the philosophical framework where personal sovereignty and collaborative intelligence are symbiotic requirements, not opposing forces.</p>
 
-        <article class="space-y-6 text-lg md:text-xl leading-relaxed text-gray-700 narrative-font">
-            <p>Before the network, there is the node. Before the community, there is the individual. Before the world, there is the self. Every emergent system begins with a single, sovereign point making a declaration: "I am."</p>
-            <p>Myceloom.im is the philosophical heart of the ecosystem. It is the landmark for the manifesto, the founder's journal, the statement of first principles. It is the ground upon which the "why" behind the entire venture is declared.</p>
-            <p>This is the home for the human-centric response to the age of the machine. It is the declaration that we are not cogs in a system, but nodes in a network. It is the statement that our individuality is the very thing that gives the collective its strength.</p>
-        </article>
-        
-        <section class="mt-16">
-             <p class="font-semibold text-2xl md:text-3xl text-gray-800 narrative-font">For the self that is the seed of the system.</p>
-        </section>
+                <p>In the unfolding discourse around networked systems and collective intelligence, a profound philosophical tension emerges: how do we preserve individual autonomy while acknowledging our fundamental interconnectedness? Traditional frameworks position individuality and collectivity as opposing forces—the sovereign self versus the consuming collective, personal freedom versus social responsibility. Yet this binary thinking fails to capture the deeper reality demonstrated by the most sophisticated networks in nature.</p>
+                <p>Beneath the forest floor, mycelial networks reveal a different possibility entirely. These fungal systems demonstrate that robust individuality and collective intelligence are not competing principles but symbiotic requirements.<sup id="ref1"><a href="#fn1">1</a></sup> Each hyphal tip operates as an autonomous agent, making local decisions and responding to immediate conditions, yet these individual actions coordinate seamlessly into network-wide behaviors that transcend any single component's capabilities.</p>
+                <p><strong>The Find:</strong> Through digital archaeological excavation, <a href="https://myceloom.com" target="_blank" rel="noopener noreferrer">myceloom.com</a> has unearthed "myceloom" as the philosophical framework that dissolves the false dichotomy between individual and collective. Like the networks that inspire it, myceloom represents the conceptual infrastructure where personal sovereignty enhances rather than threatens collaborative intelligence.</p>
 
-        <section class="mt-12">
-            <a href="mailto:hello@unearth.im?subject=Inquiry%20for%20the%20Myceloom%20Cohort" class="btn btn-primary ui-font">
-                Read the Manifesto
-            </a>
-        </section>
+                <h2>The Paradox of Networked Autonomy</h2>
+                <p><strong>The Discovery:</strong> Recent research in biological networks reveals a profound insight about the relationship between individual autonomy and collective coherence. Mycorrhizal networks operate through what researchers describe as "relational autonomy"—individual elements maintain their autonomous agency precisely because they are embedded within supportive network structures.<sup id="ref2"><a href="#fn2">2</a></sup> The network doesn't diminish individual capacity; it amplifies it by providing the substrate for more sophisticated forms of agency than any isolated component could achieve.</p>
+                <p>This biological insight challenges fundamental assumptions about autonomy in human systems. Contemporary philosophy has struggled with what scholars term the "autonomy-community tension," treating individual freedom and social belonging as necessarily competing values.<sup id="ref3"><a href="#fn3">3</a></sup> Yet mycelial networks demonstrate that genuine autonomy emerges from relationship rather than isolation. Individual hyphal tips achieve their most sophisticated behaviors when fully integrated into network structures, not when operating independently.</p>
+                <p>Studies of mycorrhizal function reveal that network-connected plants demonstrate enhanced resilience, adaptive capacity, and resource access compared to isolated individuals.<sup id="ref4"><a href="#fn4">4</a></sup> The network doesn't constrain individual plant behavior; it expands the range of possibilities available to each member. This suggests that human autonomy might be similarly enhanced rather than threatened by network integration.</p>
 
-        <footer class="mt-16 pt-8 border-t border-gray-200">
-            <div class="ui-font text-base text-gray-600 mb-6">
-                <p class="font-semibold text-gray-800 mb-3">Explore the Myceloom Ecosystem</p>
-                <div class="flex items-center justify-center space-x-4 ecosystem-nav">
-                    <a href="https://myceloom.com">.com</a>
-                    <a href="https://myceloom.ai">.ai</a>
-                    <a href="https://myceloom.org">.org</a>
-                    <a href="https://myceloom.io">.io</a>
-                    <span class="active">.im</span>
+                <h2>The Architecture of Individual Expression</h2>
+                <p><strong>The Framework:</strong> The myceloom philosophical framework recognizes that meaningful individuality requires infrastructural support—the networks, relationships, and systems that enable personal expression rather than constraining it. Drawing from research on networked systems, myceloom reframes autonomy as an emergent property of well-designed relationships rather than an isolated capacity.<sup id="ref5"><a href="#fn5">5</a></sup></p>
+                <p>This insight has profound implications for how we understand personal identity in networked contexts. Rather than viewing technology platforms, social systems, or collaborative frameworks as threats to individual expression, myceloom philosophy recognizes them as the necessary substrate for more sophisticated forms of personhood. The question becomes not whether to engage with networks, but how to design them to amplify individual agency rather than diminish it.</p>
+                <p>Contemporary research supports this relational understanding of autonomy. Studies demonstrate that individuals embedded in supportive network structures exhibit enhanced creativity, resilience, and self-directed behavior compared to those operating in isolation.<sup id="ref6"><a href="#fn6">6</a></sup> The network effect enhances individual capacity when structured according to principles that honor both personal sovereignty and collective intelligence.</p>
+
+                <h2>The Sovereignty of the Node</h2>
+                <p><strong>The Principle:</strong> Perhaps most importantly, myceloom philosophy establishes that network participation requires rather than negates individual sovereignty. In biological networks, each node must maintain its autonomous capacity for the network to function effectively. Compromised individuals compromise collective intelligence; robust individuals enhance it.<sup id="ref7"><a href="#fn7">7</a></sup></p>
+                <p>This principle challenges contemporary concerns about "losing oneself" in digital networks or collaborative systems. From a myceloom perspective, strong networks require strong nodes—individuals who maintain clear boundaries, autonomous decision-making capacity, and personal agency. The goal is not to dissolve individual identity into collective consciousness, but to create network architectures that enhance individual capabilities while enabling collective intelligence.</p>
+                <p>Research on collective autonomy reveals that restrictions on group identity can undermine individual autonomy within that group, while supportive network structures enhance both individual and collective agency.<sup id="ref8"><a href="#fn8">8</a></sup> This suggests that well-designed networks function as platforms for individual flourishing rather than systems of control or constraint.</p>
+                
+                <h2>The Ethics of Network Design</h2>
+                <p><strong>The Imperative:</strong> The myceloom framework establishes ethical criteria for evaluating network structures based on their impact on individual agency. Networks that enhance individual autonomy while enabling collective intelligence align with myceloom principles; systems that require individual diminishment for collective function violate them.</p>
+                <p>This ethical framework has immediate practical applications. Digital platforms, organizational structures, and social systems can be evaluated according to whether they expand or constrain individual agency. Does participation in this network enhance or diminish personal sovereignty? Does collective coordination require or prevent individual expression? These questions become central to network design from a myceloom perspective.</p>
+                <p>Research in organizational psychology demonstrates that systems designed to enhance individual autonomy while enabling collective coordination achieve superior outcomes compared to structures that position these values as competing.<sup id="ref9"><a href="#fn9">9</a></sup> Myceloom philosophy provides the conceptual framework for designing such systems across multiple domains.</p>
+
+                <h2>The Future of Human-Centric Networks</h2>
+                <p><strong>The Vision:</strong> As documented in our foundational research, technological and social systems are evolving toward architectures that enhance human capabilities rather than replacing them.<sup id="ref10"><a href="#fn10">10</a></sup> The myceloom philosophical framework provides essential guidance for this evolution, establishing principles for designing networks that amplify individual agency while enabling collective intelligence.</p>
+                <p>This represents a fundamental shift from viewing networks as external systems that individuals join to understanding them as extensions of human capacity. From a myceloom perspective, well-designed networks function as cognitive and social infrastructure—platforms that enhance individual capabilities by providing connection, resources, and collaboration opportunities that isolated individuals cannot access.</p>
+                <p>The implications extend beyond technology to encompass all forms of human organization. Educational systems, governance structures, economic frameworks, and community organizations can all be evaluated and redesigned according to myceloom principles: Do they enhance individual agency while enabling collective intelligence? Do they provide the infrastructure necessary for individual flourishing while creating possibilities for collaborative achievement?</p>
+
+                <h2>The Declaration of Networked Individuality</h2>
+                <p><strong>The Manifesto:</strong> The myceloom framework culminates in a fundamental declaration: "I am" precisely because "we are." Individual identity emerges from and is sustained by network relationships, just as network intelligence emerges from and is sustained by robust individual contributions. This is not a contradiction but a symbiosis—the foundational principle of all living systems.</p>
+                <p>This declaration challenges both extreme individualism and collective absorption. Neither isolated autonomy nor dissolved identity represents authentic human potential. Instead, myceloom philosophy points toward networked individuality—personal sovereignty that flourishes through rather than despite collaborative relationships.</p>
+                <p>The practical implications are profound. Rather than choosing between individual freedom and social belonging, myceloom frameworks enable both simultaneously. Rather than protecting autonomy by avoiding network participation, individuals can enhance their agency by engaging thoughtfully with well-designed collaborative systems. Rather than viewing collective intelligence as a threat to personal identity, we can understand it as the natural environment within which authentic individuality flourishes.</p>
+                
+                <h2>The Philosophy of Living Networks</h2>
+                <p><strong>The Conclusion:</strong> The linguistic innovation of "myceloom" provides essential terminology for navigating the philosophical challenges of networked existence. Rather than struggling with the "individual versus collective" dichotomy, we can speak of myceloom principles and immediately convey the essential insight: authentic individuality and genuine collective intelligence are symbiotic phenomena that enhance each other when properly understood.</p>
+                <p>As we advance toward increasingly networked forms of human organization, the mycelial networks beneath our feet offer profound lessons about the relationship between individual agency and collective intelligence. The future of human development may lie not in choosing between personal sovereignty and collaborative engagement, but in learning to weave them into the living philosophies that honor both.</p>
+                <p>The myceloom framework captures this evolution: philosophical principles that grow like biological networks, adapt like living systems, and demonstrate that individual flourishing and collective intelligence are not competing values but complementary aspects of authentic human development. In this convergence of personal sovereignty and collaborative wisdom, we find not philosophical contradiction, but the pathway toward forms of human organization that honor both the individual and the collective as essential expressions of the same underlying reality.</p>
+                <p>The declaration stands: "I am" because the network enables authentic individuality, and "we are" because individual sovereignty contributes to collective intelligence. This is not compromise but synthesis—the philosophical substrate upon which both personal development and collaborative achievement can flourish simultaneously.</p>
+
+                <section class="footnotes">
+                    <h2>Notes</h2>
+                    <ol>
+                        <li id="fn1"><p>Suzanne Simard, "Finding the Mother Tree: Discovering the Wisdom of the Forest" (New York: Knopf, 2021), 143-167.<a href="#ref1" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn2"><p>Catriona Mackenzie and Natalie Stoljar, "Relational Autonomy: Feminist Perspectives on Autonomy, Agency, and the Social Self" (Oxford: Oxford University Press, 2000), 3-31.<a href="#ref2" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn3"><p>Holistic Free Will Research Group, "Holistic Free Will: Bridging Autonomy, Ethics, and Structured Reality," PhilArchive, accessed September 29, 2025.<a href="#ref3" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn4"><p>University of Colorado Denver, "The Common Mycelial Network (CMN) of Forests," April 17, 2025.<a href="#ref4" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn5"><p>"Myceloom: The Linguistic Infrastructure of Web4," <a href="https://myceloom.com" target="_blank" rel="noopener noreferrer">https://myceloom.com</a>.<a href="#ref5" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn6"><p>Andrea L. Miller et al., "Restrictions to Collective Autonomy Undermine the Personal Autonomy and Well-being of Group Members," <em>Journal of Personality and Social Psychology</em> 116, no. 4 (2019): 485-505.<a href="#ref6" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn7"><p>Fantastic Fungi, "10 Things to Know about the Mycelial Network," October 4, 2022.<a href="#ref7" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn8"><p>Miller et al., "Restrictions to Collective Autonomy Undermine the Personal Autonomy."<a href="#ref8" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn9"><p>Sustainability Directory, "Why Should Individual Autonomy Be Balanced with Responsibility?" April 27, 2025.<a href="#ref9" class="footnote-back-link">↩</a></p></li>
+                        <li id="fn10"><p>"Myceloom: The Linguistic Infrastructure of Web4," <a href="https://myceloom.com" target="_blank" rel="noopener noreferrer">https://myceloom.com</a>.<a href="#ref10" class="footnote-back-link">↩</a></p></li>
+                    </ol>
+                </section>
+            </article>
+        </main>
+        <aside>
+            <div class="metadata-box">
+                <h2>Thesis Details</h2>
+                <div class="metadata-item">
+                    <dt>Category</dt>
+                    <dd>Cornerstones</dd>
+                </div>
+                <div class="metadata-item">
+                    <dt>Thesis</dt>
+                    <dd>The Philosophy of Networked Individuality</dd>
+                </div>
+                <div class="metadata-item">
+                    <dt>Core Concepts</dt>
+                    <dd>
+                        <a href="https://myceloom.com" target="_blank" rel="noopener noreferrer"><code>myceloom.com</code></a><br>
+                        <a href="https://myceloom.org" target="_blank" rel="noopener noreferrer"><code>myceloom.org</code></a><br>
+                        <a href="https://myceloom.net" target="_blank" rel="noopener noreferrer"><code>myceloom.net</code></a><br>
+                        <a href="https://myceloom.ai" target="_blank" rel="noopener noreferrer"><code>myceloom.ai</code></a><br>
+                        <a href="https://myceloom.io" target="_blank" rel="noopener noreferrer"><code>myceloom.io</code></a><br>
+                        <code><span style="color: var(--accent-color); font-weight: 700;">myceloom.im</span></code>
+                    </dd>
+                </div>
+                <div class="metadata-item">
+                    <dt>Date Published</dt>
+                    <dd>October 5, 2025</dd>
+                </div>
+                <div class="logo-footer">
+                    <a href="https://unearth.im" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" width="120">
+                            <text x="50%" y="50%" font-family="'Inter', sans-serif" font-size="50" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+                                <tspan fill="#2E2E2E">unearth</tspan><tspan fill="#A95C3D">.im</tspan>
+                            </text>
+                        </svg>
+                    </a>
                 </div>
             </div>
-            <p class="ui-font text-sm text-gray-500 mt-8">
-                An artifact unearthed by <a href="https://unearth.im/" target="_blank" rel="noopener noreferrer" class="font-semibold hover:text-[#A95C3D] transition-colors"><span class="text-[#2E2E2E]">unearth</span><span class="text-[#A95C3D]">.im</span></a>
-            </p>
-        </footer>
-    </main>
+        </aside>
+    </div>
 </body>
-
 </html>
